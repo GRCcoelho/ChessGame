@@ -16,7 +16,11 @@ namespace ChessGame
 
             Tela.imprimirTabuleiro(tab);
 
-            Console.ReadLine(); 
+            
+
+            
+
+            Console.ReadLine();
         }
     }
 }
