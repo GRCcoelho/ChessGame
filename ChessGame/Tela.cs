@@ -11,7 +11,7 @@ namespace ChessGame
     class Tela
     {
 
-        public static  void imprimirPartida(PartidaDeXadrez partida)
+        public static void imprimirPartida(PartidaDeXadrez partida)
         {
             imprimirTabuleiro(partida.tab);
             Console.WriteLine();
@@ -19,6 +19,13 @@ namespace ChessGame
             Console.WriteLine();
             Console.WriteLine("Turno : " + partida.turno);
             Console.WriteLine("Aguardando rodada: " + partida.jogadorAtual);
+
+            if (partida.xeque)
+            {
+                Console.WriteLine("XEQUE!");
+
+            }
+
         }
 
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
