@@ -4,6 +4,7 @@ namespace ChessGame.xadrez
 {
     class Torre : Peca
     {
+
         public Torre(Tabuleiro tab, Cor cor) : base(tab, cor)
         {
         }
@@ -25,8 +26,8 @@ namespace ChessGame.xadrez
 
             Posicao pos = new Posicao(0, 0);
 
-            //acima
-            pos.definirValores(pos.linha - 1, posicao.coluna);
+            // acima
+            pos.definirValores(posicao.linha - 1, posicao.coluna);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -37,8 +38,8 @@ namespace ChessGame.xadrez
                 pos.linha = pos.linha - 1;
             }
 
-            //abaixo
-            pos.definirValores(pos.linha + 1, posicao.coluna);
+            // abaixo
+            pos.definirValores(posicao.linha + 1, posicao.coluna);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -49,8 +50,8 @@ namespace ChessGame.xadrez
                 pos.linha = pos.linha + 1;
             }
 
-            //direita
-            pos.definirValores(pos.linha, posicao.coluna + 1);
+            // direita
+            pos.definirValores(posicao.linha, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -61,8 +62,8 @@ namespace ChessGame.xadrez
                 pos.coluna = pos.coluna + 1;
             }
 
-            //esquerda
-            pos.definirValores(pos.linha , posicao.coluna - 1);
+            // esquerda
+            pos.definirValores(posicao.linha, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
